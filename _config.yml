@@ -1,0 +1,10 @@
+# Site settings
+title: Josh Hartigan 
+email: joshhartigan99@gmail.com
+description: "My name is Josh Hartigan and this is my website."
+baseurl: ""
+url: "http://joshhartigan.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
