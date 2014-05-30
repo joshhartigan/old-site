@@ -13,7 +13,6 @@ The description for this is quite vague, but I'll have a go at a program that ge
 Here it is:
 
 ```
-
 import random
 
 def namegen():
@@ -39,6 +38,7 @@ print namegen()
 **2. Higher or Lower**
 
 This one seems like a very simple program. I will do it in JavaScript:
+
 ```
 function higherOrLower(var1, var2) {
     if (var1 > var2) {
@@ -49,7 +49,6 @@ function higherOrLower(var1, var2) {
         return "equal";
     }
 }
-
 ```
 
 **3. Temperature Converter**
@@ -57,7 +56,6 @@ function higherOrLower(var1, var2) {
 For this one I can just google the formula and implement it. This time, in Go:
 
 ```
-
 package main
 
 func fahrenheitCelsius(f int) int {
@@ -67,7 +65,6 @@ func fahrenheitCelsius(f int) int {
 func celsiusFahrenheit(c int) int {
     return c * 9/5 + 32
 }
-
 ```
 
 **4. Age in Seconds**
@@ -75,7 +72,6 @@ func celsiusFahrenheit(c int) int {
 Pretty much just multiplication, if we ignore leap years. I will do it in C:
 
 ```
-
 #include <stdio.h>
 
 long ageInSeconds(int age) {
@@ -90,7 +86,6 @@ int main() {
 
     return 0;
 }
-
 ```
 
 I will do more of these later.
