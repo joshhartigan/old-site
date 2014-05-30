@@ -12,7 +12,7 @@ So, that is what I will try and do. They will probably get harder, and bigger, a
 The description for this is quite vague, but I'll have a go at a program that generates names like you'd see on WoW's random name generator or something.
 Here it is:
 
-```
+~~~
 import random
 
 def namegen():
@@ -33,13 +33,13 @@ def namegen():
     return name
 
 print namegen()
-```
+~~~
 
 **2. Higher or Lower**
 
 This one seems like a very simple program. I will do it in JavaScript:
 
-```
+~~~
 function higherOrLower(var1, var2) {
     if (var1 > var2) {
         return "higher";
@@ -49,13 +49,13 @@ function higherOrLower(var1, var2) {
         return "equal";
     }
 }
-```
+~~~
 
 **3. Temperature Converter**
 
 For this one I can just google the formula and implement it. This time, in Go:
 
-```
+~~~
 package main
 
 func fahrenheitCelsius(f int) int {
@@ -65,13 +65,13 @@ func fahrenheitCelsius(f int) int {
 func celsiusFahrenheit(c int) int {
     return c * 9/5 + 32
 }
-```
+~~~
 
 **4. Age in Seconds**
 
 Pretty much just multiplication, if we ignore leap years. I will do it in C:
 
-```
+~~~
 #include <stdio.h>
 
 long ageInSeconds(int age) {
@@ -86,6 +86,6 @@ int main() {
 
     return 0;
 }
-```
+~~~
 
 I will do more of these later.
