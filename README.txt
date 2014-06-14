@@ -12,8 +12,9 @@
 ./style/res/:
     resources such as images
 
-build.py: --NYI--
+build.sh: 
     convert ./markdown/*.md to ./pages/*.html
+    this isn't fully-featured yet.
 
 index.html:
     the main index page
