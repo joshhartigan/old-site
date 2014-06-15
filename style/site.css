@@ -50,3 +50,10 @@ a {
 a.sec {
     color: #c9c8c3;
 }
+
+/* bigger font for code, since the site is about
+ * programming */ 
+pre {
+    font-size: 13pt;
+    background-color: #ffffd8;
+}

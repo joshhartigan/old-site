@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Python : Josh Hartigan</title>
+    <link rel="stylesheet" type="text/css" href="../style/site.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="topbar"></div>
+    <a href="../index.html"><img id="titlelogo" src="../style/res/titlelogo.png" alt="Josh Hartigan"></a>
+    <div class="content">
+        <h1 name="python"><a class="sec" href="#python"># </a>Beginning Python</h1>
+        <p>Python is a good language to write in because of its simplicity, which makes programming easier than usual
+        as a result, as well as being very fun to write in. It is commonly used for scripting and web programming
+        but as it is a general-purpose language, there is not much of a limit as to what can be written in Python.</p>
+        <p>Python is a language that follows a trending practice in software construction - it is a reasonably simple
+        language, and its power is utilized best with both first-party and third-party modules, of which there are
+        many.
+        <br/>Python is a dynamic language, performing many actions at run time rather than compilation time -- in fact,
+        Python doesn't <i>have</i> compilation time; it is an interpreted language.</p>
+        <p>Before the language is looked at from a close-up perspective, a few last things:
+        <ul>
+            <li>Python is open source under the PSF license (GPL compatible)</li>
+            <li>It has an interactive interpreter, which is very useful for testing features
+            of the language, and your own functions.</li>
+            <li>Python has well-designed object-oriented design features.</li>
+        </ul>
+        </p>
+        <p>In terms of basic, 'core' features of a language, Python has all the common data types that would be expected
+        in a general-purpose language - numbers, strings, lists, and hash tables (in Python, hash tables are more commonly
+        referred to as 'dictionaries'). As previously mentioned, OOP is supported: Python has classes and multi-inheritance.
+        Errors and exceptions are built in to the language, and mismatched types will raise an exception (e.g. "hello" + 9 is
+        an example of string + int).
+        <br/>A very helpful, whilst not unique, feature of Python is its memory management, removing the need to allocate and free
+        memory by hand in your programs.</p>
+    </div>
+    <div class="content">
+        <h1 name="syntax"><a class="sec" href="#syntax"># </a>Python's Syntax</h1>
+        <p>Here is an example of Python's simple and clear syntax: The <i>hello, world</i> program:</p>
+        <pre>
+        print "hello, world!"</pre>
+        <p>Comparing Python to Java - another powerful language that is also beginner-friendly - the language's simplicity can be
+        seen very easily. Because everything in Java has to be in a class, there is boilerplate code that is necessary as well.
+        Here is our <i>hello world</i> program in Java:</p>
+        <pre>
+        public class HelloWorld {
+            public static void main(String[] args) {
+                System.out.println("hello, world!");
+            }
+        }</pre>
+        <p>Unlike many C-Like languages which use {braces} and sem;colons, Python has <b>significant whitespace</b>. This means that
+        the scope of a block of code (like an if statement, a function, or a class) is defined by its indentation, rather than its
+        being wrapped in braces - like the Java code above. If we wanted to create a class called <code>HelloWorld</code>, with the
+        same function <code>main</code> in Python, it would look like this:
+        <pre>
+        class HelloWorld:
+            def main(args):
+                print "hello, world!"</pre>
+        It is the colons that <b>begin</b> the scope of the class or function, and the indentation of code that shows the interpeter
+        which scope of code a line is in - so, the line 'print "hello, world" is in the function main()'s scope, which is in the class
+        HelloWorld's scope.</p>
+    </div>
+    <div class="content">
+        <h1 name="learn"><a class="sec" href="#learn"># </a>Learn Python</h1>
+        <p>If you're interested in learning the language, here are some websites and books I can recommend. None of these
+        sources need programming experience, but the books are still good if you are already a programmer:</p>
+        <ul>
+            <li><a href="http://www.codecademy.com">Codecademy</a> - Good for picking up core syntax</li>
+            <li><a href="http://www.amazon.co.uk/Python-Programming-Absolute-Beginner-Dawson/dp/1435455002/ref=sr_1_1?ie=UTF8&qid=1402865068&sr=8-1&keywords=python+for+the+absolute+beginner">Python Programming for the Absolute Beginner</a> - An easily readable book, introduces
+            Python through game development.</li>
+            <li><a href="http://www.learnpythonthehardway.org">Learn Python the Hard Way</a> - Very popular, an original approach to
+            learning programming. If I didn't know Python, I'd use this.</li>
+        </ul>
+    </div>
+</body>
+</html>
