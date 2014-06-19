@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Queue : Josh Hartigan</title>
+    <link rel="stylesheet" type="text/css" href="../style/site.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="topbar"></div>
+    <a href="../index.html"><img id="titlelogo" src="../style/res/titlelogo.png" alt="Josh Hartigan"></a>
+    <div class="content">
+        <h1 name="queue"><a class="sec" href="#queue"># </a>Queues</h1>
+        <p>Queues are a FIFO data structure - i.e, First In, First Out. What this means is that in
+a queue structure, insertion and removal happens at different ends (as opposed to LIFO
+structures, where it uses a last-in-first-out system - like a tube of tennis balls,
+insertion and removal is at the same end).</p>
+        <p>So, in a queue, every insertion must occur at the 'rear' or 'tail' of the queue, and
+removal must happen at the 'front' or 'head'.</p>
+        <p><a href="http://www.youtube.com/user/mycodeschool">mycodeschool</a>'s definition of a queue is:</p>
+        <p><i>A list or collection with the restriction that insertion can be performed at one end
+(rear) and deletion can be performed at the other end (front).</i></p>
+        <p>If a programmer wrote an implementation of the queue as a data type, here are some of
+the routines that they would probably write:</p>
+        <p><ul>
+            <li>Queue.enqueue(elem), Queue.push(elem) or Queue.insert(elem) - insert 'elem' onto the
+  rear of the queue. This function will have a void return type.</li>
+            <li>Queue.dequeue(elemCount), Queue.pop(elemCount) or Queue.remove(elemCount) - remove 'elemCount' elements off thefront of the queue. This function will have an int return type, to return the element that was popped off it's front. It can also be written as a void type.</li>
+            <li>Queue.front(), to simply return the element at the front of the queue.</li>
+            <li>Queue.isEmpty() - a self explanatory routine, with boolean return type.</li>
+            <li>If the queue is not infinite in its size, a Queue.isFull() boolean can also be constructed.</li>
+        </ul></p>
+        <p>Looking at these routines, unless they are written badly, they should all take
+constant time - O(1). None of them need to iterate through the queue, since they all
+interact with just the front element.</p>
+        <p>Here are some diagrams:</p>
+        <p><img src="http://i.imgur.com/zDaqPjG.png"/></p>
+        <p>In the image above, we have a Queue 'q', with length of 3 and its rear and front
+labelled above. If we were to call <code>q.push(4)<code>, we would get this result:</p>
+        <p><img src="http://i.imgur.com/TUHAwUK.png"/></p>
+        <p>As you can see, the 4 has been enqueued, and the 'rear' label of the queue has been
+updated accordingly. If we were to call <code>q.pop()</code> - not needing any parameters, since
+it only pops off the front element - we would get <i>this<i> result:</p>
+        <p><img src="http://i.imgur.com/HbTg35P.png"/></p>
+        <p>The previous front element, 5, has been popped off, and 3 is now the new front element
+of the queue.</p>
+   </div>
+</body>
+</html>

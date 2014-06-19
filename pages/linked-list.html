@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Linked List : Josh Hartigan</title>
+    <link rel="stylesheet" type="text/css" href="../style/site.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="topbar"></div>
+    <a href="../index.html"><img id="titlelogo" src="../style/res/titlelogo.png" alt="Josh Hartigan"></a>
+    <div class="content">
+        <h1 name="linkedlist"><a class="sec" href="#linkedlist"># </a>Linked Lists</h1>
+        <p>The linked list is a data structure that comes in handy when someone who is building a piece of software has a collection of data, and there is the chance that a lot of insertions and removals will need to be carried out.</p>
+        <p>In a structure such as an array, if an item is placed at the end of the list, the array's originally defined size must change. If an item was to be placed in a position that isn't the end of the list, all the items in front of it would have to be reallocated to a new position, 1 above their original index. As a side effect of this, removed items would leave wasted space that could only be removed with *more* reallocation.</p>
+        <p>However, with linked lists, every element/item/node in the list has a pointer attached to it, pointing to the next element. When a programmer wants to add an element in, rather than reallocating a lot of items, the item before the position of the item added in can have its pointer re-pointed.</p>
+        <p>An example can be shown as follows:</p>
+        <pre>[a]-> [b]-> [c]-> [d]-> [e]-> [NULL / TERMINATE]</pre>
+        <p>In the above diagram, each item in the linked list (represented as [value]) has a pointer 'attached' to it, that points to the next item. The last item, [e], still has a pointer, but it points to a terminating value, such as null. If [e]'s pointer pointed into empty space, the program in which the list is held would cause memory errors. Here, an item is inserted into the list:</p>
+        <pre>     -> [n]-v                                       // the 'v' is a down arrow
+    [a]   [b]-> [c]-> [d]-> [e]-> [NULL / TERMINATE]</pre>
+        <p>it isn't a very well drawn diagram, since it has been 'drawn' in text, but what has happened is that the new element ([n]), has [a]'s pointer (that previously pointed at [b]), switched to point at [n]. As, to continue the linking of the entire list, [b] needs to be pointed to, [n]'s pointer is assigned to it.</p>
+    </div>
+</body>
+</html>
