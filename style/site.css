@@ -60,5 +60,8 @@ pre {
 
 /* disqus comments */
 #disqus_thread {
-    margin: 0 auto;
+    display: block;
+    
+    margin-left: auto;
+    margin-right: auto;
 }
