@@ -57,3 +57,8 @@ pre {
     font-size: 13pt;
     background-color: #ffffd8;
 }
+
+/* disqus comments */
+#disqus_thread {
+    margin: 0 auto;
+}
