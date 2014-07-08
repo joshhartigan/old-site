@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>The Stack and the Heap : Josh Hartigan</title>
+    <link rel="stylesheet" type="text/css" href="../style/site.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="topbar"></div>
+    <a href="../index.html"><img id="titlelogo" src="../style/res/titlelogo.png" alt="Josh Hartigan"></a>
+    <div class="content">
+      <i><b>This page is not currently finished.</b></i>
+      <h1 name="stackheap"><a class="sec" href="#stackheap"># </a>The Stack and the Heap</h1>
+      <p>In a typical program we will usually have some of the following things:</p>
+      <ul>
+        <li>Local Variables</li>
+        <li>Objects</li>
+        <li>Instance Variables</li>
+        <li>Methods</li>
+      </ul>
+      <p>Of course there are other things, but let's focus on these four. In terms of memory management we have two places for
+      these things to live: the <b>stack</b> - where local variables and method calls/invocations are stored, and the <b>heap</b>,
+      where all of a program's objects live.</p>
+
+      <h1 name="localinstance"><a class="sec" href="#localinstance"># </a>Local or Instance Variable?</h1>
+      <p>There is a difference between local variables and instance variables which is quite easy to explain.</p>
+      <p><i>Local variables</i> are variables that are declared inside a method, or function. This includes parameters.
+      Take this example of a method written in Java:</p>
+      <pre>public void power(int x, int e) {
+      int result;
+      for (int i = 0; i &lt; e; i++) {
+        result *= x;
+      }
+      return result;
+}      </pre>
+      <p>In the <code>power</code> method, the parameters - <code>x</code> and <code>e</code> are local variables, as well as
+      the variables <code>i</code> and <code>result</code>.</p>
+      <p>On the other hand, <i>instance variables</i> are the 'other' variables - declared inside a class, but not inside a
+      method. They could be described as 'properties' of a class in some circumstances - as an example, a <code>Sound</code> class
+      might have a <code>volume</code> property, as an integral instance variable. Think of instance variables as being
+      <b>contained</b> in an object of the class they belong to.</p>
+
+      <h1 name="stack"><a class="sec" href="#stack"># </a>On the Stack</h1>
+      <p>...</p>
+    </div>
+</body>
+</html>
