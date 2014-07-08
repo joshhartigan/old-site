@@ -7,10 +7,11 @@ body {
 /* red bar stretched across whole of
  * top screen */
 #topbar {
-    margin: 0 auto;
     width: 100%;
     height: 10px;
     background-color: #c74b30;
+    position: fixed;
+    margin-top: -16px;
 }
 
 /* same color as #topbar */
@@ -52,7 +53,7 @@ a.sec {
 }
 
 /* bigger font for code, since the site is about
- * programming */ 
+ * programming */
 pre {
     font-size: 13pt;
     background-color: #ffffd8;
@@ -61,7 +62,7 @@ pre {
 /* disqus comments */
 #disqus_thread {
     display: block;
-    
+
     margin-left: auto;
     margin-right: auto;
 }
