@@ -37,6 +37,7 @@ div.content {
 /* 'Josh Hartigan' header logo. font is Adelle Bold */
 #titlelogo {
     display: block;
+    width: 820px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 16px;
