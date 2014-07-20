@@ -1,6 +1,6 @@
 http://joshhartigan.github.io
 http://joshhartigan.github.io/index.html
-http://joshhartigan/github.io/404.html
+http://joshhartigan.github.io/404.html
 http://joshhartigan.github.io/binary-tree.html
 http://joshhartigan.github.io/lang-python.html
 http://joshhartigan.github.io/linked-list.html
