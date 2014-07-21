@@ -8,6 +8,8 @@
   <title>Hash Table : Josh Hartigan</title>
   <link rel="stylesheet" type="text/css" href="../style/site.css">
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css" type="text/css">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -118,5 +120,62 @@
     secondTable["employed"] = False
     print secondTable["employed"] # ==> False
     </pre>
+  </div>
+  <div class="content">
+    <h1 name="usage"><a class="sec" href="#usage"># </a>Hash Table Usage</h1>
+    <p>Finally, it would be good to see usage of a hash table in a program. For this, I've written a basic implementation
+    of the Spanner &amp; Co. program, described above.</p>
+    <p>Remember, of course, that in this circumstance the code of the program is more important than the program itself.</p>
+  </div>
+  <pre class="prettyprint" style="width: 600px; font-size: 10pt; margin: 0 auto; margin-top: -40px; margin-bottom: 20px;">
+  spannerData = {
+      "TurboWrench21K": [224, 7.54],
+      "SuperSpan": [194, 5.99],
+      "SpannerSupreme": [88, 14.99],
+      "WonderWrench": [201, 6.50],
+  }
+
+  def getSpannerInfo(spannerName):
+      """ Return the sell count and price of a specified spanner. """
+      return spannerData[spannerName]
+
+  def addSpanner(name, price):
+      """ Add a spanner with the specified data to the table. """
+      spannerData[name] = [0, price]
+
+  def removeSpanner(name):
+      """ Remove the specified spanner from the table. """
+      try:
+          spannerData.pop(name)
+      except KeyError:
+          return "*** Spanner '" + name + "' was not found."
+
+  def main():
+      option = raw_input("[A]dd, [R]emove, [G]et data, or [Q]uit? &gt;&gt; ")
+      while option != "Q" and option != "q":
+          if option == "A" or option == "a":
+              name = raw_input("Spanner Name? &gt;&gt; ")
+              price = raw_input("Price? &gt;&gt; ")
+              addSpanner(name, price)
+          elif option == "R" or option == "r":
+              name = raw_input("Spanner Name? &gt;&gt; ")
+              if not removeSpanner(name):
+                  removeSpanner(name)
+              else:
+                  print removeSpanner(name)
+          elif option == "G" or option == "g":
+              name = raw_input("Spanner Name? &gt;&gt; ")
+              for spanner in spannerData.keys():
+                if spanner.startswith(name):
+                  print "Sell count: ", getSpannerInfo(spanner)[0]
+                  print "Price: ", getSpannerInfo(spanner)[1]
+                  break
+      else:
+          print("*** This instruction was not understood.")
+      option = raw_input("[A]dd, [R]emove, [G]et data, or [Q]uit? &gt;&gt; ")
+
+  if __name__ == "__main__":
+      main()
+  </pre>
 </body>
 </html>
