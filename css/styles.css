@@ -1,0 +1,42 @@
+html, body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  /* background-color: #97C5E6; */
+  color: #333;
+  width: 100%;
+}
+
+#container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  text-indent: 2.2em;
+  margin-bottom: -9px;
+}
+
+a {
+  color: #00a;
+}
+
+img {
+  vertical-align: middle;
+}
+
+li {
+  list-style-type: none;
+}
+
+li > span {
+  color: #666;
+  font-size: 12px;
+  font-family: Monaco, "Courier New", monospace;
+}
+
