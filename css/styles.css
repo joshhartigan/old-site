@@ -1,29 +1,32 @@
-html, body {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 18px;
-  /* background-color: #97C5E6; */
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+html {
+  font-family: Charter, serif;
+  font-size: 130%;
   color: #333;
   width: 100%;
 }
 
-#container {
+body {
   width: 50%;
   margin: 0 auto;
+  padding: 30px 0;
 }
 
+#topbar, #bottombar { height: 10px; background: black; }
+         #bottombar { margin-top: 40px; }
+
 h1 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 50px;
   text-align: center;
 }
 
-h2 {
-  font-size: 18px;
-  text-indent: 2.2em;
-  margin-bottom: -9px;
-}
-
 a {
-  color: #00a;
+  color: black;
+  text-decoration: none;
+} a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -34,9 +37,20 @@ li {
   list-style-type: none;
 }
 
-li > span {
-  color: #666;
-  font-size: 12px;
-  font-family: Monaco, "Courier New", monospace;
+abbr {
+  border-bottom: 1px solid #555;
 }
 
+pre, code {
+  font-family: "Source Code Pro", Monaco, monospace;
+  border: none !important;
+}
+
+.etym {
+  color: #999;
+}
+
+.math {
+  font-size: 120%;
+  margin-left: 1em;
+}

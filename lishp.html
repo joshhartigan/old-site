@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Lishp</title>
+  <meta name="description" content="Lishp">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/font.css">
+
+</head>
+
+<body>
+  <div id="topbar"></div>
+
+  <h1>Lishp</h1>
+
+  <p>Lishp <i class="etym">(etym: Eng<b>lish</b> + <b>lisp</b>
+  (a programming language))</i> is a <abbr title="read: non-Turing complete">
+  simple</abbr> programming language that compiles down to Python, and is
+  designed to be ultra-readable, via close similarity to the syntax of the
+  English language.</p>
+
+  <p>A snippet of Lishp code can demonstrate this quality:</p>
+  <pre class="prettyprint">
+  say hello, world!
+  set my_name to "Lishp"
+  say I am called {my_name}
+  set age to 10
+  add 1 to age
+  say Next year I will be {age}
+  </pre>
+
+  <p>The <code>say</code> command takes plain, un-quoted text as an argument,
+  and prints the text to standard output. When the value of a variable needs
+  to be included in the text, its identifier is surrounded in braces, as seen
+  in the example above with <code>{my_name}</code> and <code>{age}</code>.
+
+  <p>Lishp is dynamically typed, with variable declaration following the
+  syntax</p>
+
+  <pre class="prettyprint">
+  set [VAR_NAME] to [VAR_EXPR]
+  </pre>
+
+  <p>where <code>[VAR_EXPR]</code> is an expression, usually just a literal
+  number or string, however any mathematical expression could be used, such as</p>
+
+  <div class="math">
+    4 &times; 5 &minus; 8 + ({x} &times; 3)
+  </div>
+
+  <p>The evaluation is handled by Python's <code>eval()</code> function, but
+  variable identifiers are swapped out for their values beforehand: variables
+  can be used in a mathematical expression with the usual braces syntax.</p>
+
+  <div id="bottombar"></div>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</body>
+
+</html>
+
