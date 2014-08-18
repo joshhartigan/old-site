@@ -38,6 +38,8 @@
   to be included in the text, its identifier is surrounded in braces, as seen
   in the example above with <code>{my_name}</code> and <code>{age}</code>.
 
+  <h2>Typing</h2>
+
   <p>Lishp is dynamically typed, with variable declaration following the
   syntax</p>
 
@@ -55,6 +57,27 @@
   <p>The evaluation is handled by Python's <code>eval()</code> function, but
   variable identifiers are swapped out for their values beforehand: variables
   can be used in a mathematical expression with the usual braces syntax.</p>
+
+  <h2>Strings</h2>
+
+  <p>When a variable is assigned to a string value, the value is surrounded in
+  double quotes. Concatenation of strings does not require a special character
+  such as a <code>+</code> or <code>,</code> symbol, but is done as such:</p>
+
+  <pre>
+    set home to "United" " " "Kingdom"
+  </pre>
+
+  <p>Concatenation of string identifiers can also be done in the same way:</p>
+
+  <pre>
+    set name to "Josh"
+    set surname to "Hartigan"
+    set full_name to {name} " " {surname}
+
+    // the following will print "Josh Hartigan".
+    say full_name
+  </pre>
 
   <div id="bottombar"></div>
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
