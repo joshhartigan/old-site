@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Minim: Programming and Simplicity</title>
+  <meta name="description" content="Minim Programming and Simplicity">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/font.css">
+
+</head>
+
+<body>
+  <div id="topbar"></div>
+
+  <h1>Minim: Programming and Simplicity</h1>
+
+  <p>The best programming languages should be <strong>simple.</strong></p>
+
+  <p>By 'simple', I mean none of the following:</p>
+  <ul>
+    <li>Simple and concise syntax</li>
+    <li>A Simple / Small standard library</li>
+    <li>A simple, specific domain to target </li>
+  </ul>
+
+  <p>What I really mean is this: a programming language should be a
+  <strong>simple</strong> interface between the programmer and the computer.</p>
+  <p>I shouldn't have to spend time setting up filepaths and packages for my
+  project that comply with specific rules. I shouldn't have to install a
+  plethora of package managers and configure a bunch of strange dotfiles just
+  to use somebody else's library in my project. I should be able to follow my
+  own style standards when writing code in a programming language.</p>
+
+  <p>The programming language I am designing (and slowly implementing),
+  <a href="http://joshhartigan.github.io/minim">Minim</a>, is an attempt to be
+  a language that complies with this definition of simplicity. To demonstrate
+  this, here is how code in a Minim project <em>could</em> be organised:</p>
+
+
+  <h3>Simple Project Structure</h3>
+
+  <pre>
+  myGameProject/
+    myGameProject.min
+    character.min
+    monsters.min
+    levels.min
+    screen.min
+  </pre>
+
+  <p>If the programmer is comfortable with that structure, then it's fine - they
+  can leave it that way. The program is run by interpreting the main file
+  (myGameProject.min) as such:</p>
+
+  <p> <code>minim myGameProject.min</code> </p>
+
+  <p>All the other files in the folder can be accessed from within
+  myGameProject.min simply:</p>
+
+  <p> <code>monsters.goblin()</code>; <code>levels.loadLevel1()</code>; etc.</p>
+
+  <p>...but what if the programmer wants their code split into different
+  folders for organisation?</p>
+
+
+
+  <h3>Folder-Based Project Structure</h3>
+
+  <pre>
+  myGameProject/
+    myGameProject.min
+    levels.min
+
+    entity/
+      character.min
+      monsters.min
+
+    graphics/
+      screen.min
+  </pre>
+
+  <p>The files inside the other folders can be enabled for access from
+  myGameProject.min very simply, too. All the programmer needs to do is use a
+  <code>with</code> line in the main file:</p>
+
+  <pre>
+  // in myGameProject.min:
+  with &quot;entity&quot;
+  with &quot;graphics&quot;
+
+  //...
+  screen.start();
+  monsters.goblin();
+  </pre>
+
+  <p>There are no package declarations needed, no project structure/config file.
+  Just folders and source code.</p>
+
+  <div id="bottombar"></div>
+</body>
+</html>
