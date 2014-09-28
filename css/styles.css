@@ -1,29 +1,35 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,600);
 
 html {
-  font-family: Charter, serif;
-  font-size: 130%;
-  color: #333;
   width: 100%;
+  color: #333;
+  font-size: 130%;
+  font-family: Vollkorn, serif;
 }
 
 body {
-  width: 50%;
   margin: 0 auto;
   padding: 30px 0;
+  width: 50%;
 }
 
-#topbar, #bottombar { height: 10px; background: black; }
+#topbar, #bottombar { height: 10px; background: #292724; }
          #bottombar { margin-top: 40px; }
 
 h1 {
-  font-family: Source Sans Pro, sans-serif;
-  font-size: 50px;
+  color: #292724;
   text-align: center;
+  font-size: 50px;
+  font-family: Source Sans Pro, serif;
 }
 
 h2 {
+  display: inline;
+  border-bottom: 1px solid #aaa;
+  color: #292724;
+  font-weight: bold;
   font-size: 28px;
 }
 
@@ -40,8 +46,8 @@ img {
 }
 
 li {
-  list-style-type: square;
   padding-top: 8px;
+  list-style-type: square;
 }
 
 abbr {
@@ -53,24 +59,28 @@ pre, code {
 }
 
 pre, pre.prettyprint {
-  font-size: 80%;
-
-  border-left: 10px solid #d5d5d5 !important;
-  border-right: 1px solid #d5d5d5 !important;
+  margin-left: -25px;
   border-top: 1px solid #d5d5d5 !important;
+  border-right: 1px solid #d5d5d5 !important;
   border-bottom: 1px solid #d5d5d5 !important;
 
+  border-left: 10px solid #d5d5d5 !important;
+
   background-color: #fafafa;
-  margin-left: -25px;
+  font-size: 80%;
 }
 
 hr {
-  border: 0;
   height: 1px;
+  border: 0;
   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
   background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
   background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
   background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+.back-to-top {
+  font-size: 14pt;
 }
 
 .etym {
@@ -78,8 +88,9 @@ hr {
 }
 
 .math {
-  font-size: 120%;
   margin-left: 1em;
+  font-size: 120%;
+  font-family: "Source Code Pro", Monaco, monospace;
 }
 
 .nav > li {
@@ -93,7 +104,7 @@ hr {
 }
 
 .contents li {
-  font-size: 13pt;
-  list-style-type: none;
   margin-left: -35px;
+  list-style-type: none;
+  font-size: 14pt;
 }
