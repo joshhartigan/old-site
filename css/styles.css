@@ -1,40 +1,56 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
 @import url(http://fonts.googleapis.com/css?family=Vollkorn:400,600);
 
+/* Some of this has been adapted from the CSS of markdotto.com */
+
+* {
+  -webkit-box-sizing: border-box:
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
-  width: 100%;
-  color: #333;
-  font-size: 130%;
-  font-family: Vollkorn, serif;
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
+  font-size: 16px;
+} @media (min-width: 48em) {
+  html {
+    font-size: 21px;
+  }
 }
 
 body {
+  padding: 2rem 1.5rem;
+  line-height: 1.5;
+  color: #292724;
+  max-width: 32rem;
   margin: 0 auto;
-  padding: 30px 0;
-  width: 50%;
 }
 
-#topbar, #bottombar { height: 10px; background: #292724; }
-         #bottombar { margin-top: 40px; }
-
 h1 {
-  color: #292724;
+  font-size: 2rem;
   text-align: center;
-  font-size: 50px;
-  font-family: Source Sans Pro, serif;
+  font-family: "Source Sans Pro", serif;
 }
 
 h2 {
   display: inline;
-  border-bottom: 1px solid #aaa;
-  color: #292724;
+  border-bottom: 1px solid #eee;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+} @media (min-width: 48em) {
+  h2 {
+    font-size: 1.6rem;
+  }
 }
 
 a {
-  color: #e50053;
+  color: #E50053;
   text-decoration: none;
 } a:hover {
   text-decoration: underline;
@@ -55,31 +71,46 @@ abbr {
 }
 
 pre, code {
-  font-family: "Source Code Pro", Monaco, monospace;
+  font-size: 70%;
+  font-family: Menlo, Monaco, "Courier New" monospace;
+}
+
+@media (max-width: 30em) {
+  code {
+    word-break: break-word;
+  }
 }
 
 pre, pre.prettyprint {
   margin-left: -25px;
-  border-top: 1px solid #d5d5d5 !important;
-  border-right: 1px solid #d5d5d5 !important;
-  border-bottom: 1px solid #d5d5d5 !important;
+  border-top: 1px solid #eee !important;
+  border-right: 1px solid #eee !important;
+  border-bottom: 1px solid #eee !important;
 
-  border-left: 10px solid #d5d5d5 !important;
+  border-left: 10px solid #eee !important;
 
   background-color: #fafafa;
-  font-size: 80%;
 }
 
 hr {
+  margin: 2rem auto;
+  width: 300px;
   height: 1px;
   border: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background: #ddd;
+}
+
+#index-title {
+  font-size: 60px;
+  margin: 0;
+}
+
+#top-title {
+  font-size: 50px;
 }
 
 .back-to-top {
+  color: #999;
   font-size: 14pt;
 }
 
@@ -90,10 +121,11 @@ hr {
 .math {
   margin-left: 1em;
   font-size: 120%;
-  font-family: "Source Code Pro", Monaco, monospace;
+  font-family: Menlo, Monaco, monospace;
 }
 
 .nav > li {
+  font-size: 1.3em;
   list-style-type: none;
 }
 
@@ -106,5 +138,5 @@ hr {
 .contents li {
   margin-left: -35px;
   list-style-type: none;
-  font-size: 14pt;
+  font-size: 21px;
 }

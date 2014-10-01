@@ -13,13 +13,11 @@
 </head>
 
 <body>
-  <div id="topbar"></div>
-
-  <h1>My Vim Config</h1>
+  <h1 id="top-title">My Vim Config</h1>
 
   <p>Vim is a very good editor, but it can be configured to be an even better
-  editor. Below is an annotated version of my .vimrc <i class="etym">(the file
-  that is loaded on Vim's opening)</i>, which can be found in its original
+  editor. Below is an annotated version of my .vimrc <span class="etym">(the file
+  that is loaded on Vim's opening)</span>, which can be found in its original
   state on my <a href="https://github.com/joshhartigan/dotfiles">dotfiles repo</a>.</p>
 
   <p>If you are new to Vim, this isn't for you. Some very basic and/or obvious
@@ -37,23 +35,17 @@
   <hr />
 
   <h2 id="plugins">Plugins
-    <a class="back-to-top scroll" href="#topbar">back to top</a>
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
   </h2>
 
   <p>I use <a href="https://github.com/gmarik/Vundle">Vundle</a> to manage and
-  install Vim plugins. All the plugins I have installed are listed at the
-  beginning of my Vim config:</p>
+  install Vim plugins. These are the most notable of the plugins I use:</p>
 
   <pre class="prettyprint lang-vim">
   Plugin 'gmarik/Vundle.vim'
   Plugin 'delimitMate.vim'
-  Plugin 'VimClojure'
   Plugin 'ervandew/supertab'
-  Plugin 'bling/vim-airline'
-  Plugin 'hail2u/vim-css3-syntax'
-  Plugin 'loremipsum'
-  Plugin 'jelera/vim-javascript-syntax'
-  Plugin 'chriskempson/base16-vim'</pre>
+  Plugin 'scrooloose/nerdree'</pre>
 
   <p>A few of these plugins are for providing a more modern look and feel to Vim:
   <a href="http://www.vim.org/scripts/script.php?script_id=2754">DelimitMate</a>
@@ -70,9 +62,10 @@
   a set of 256-color color schemes for Vim which all look very good; they have
   become the only color schemes I use.</p>
 
+  <hr />
 
   <h2 id="navkeys">Navigation Keybindings
-    <a class="back-to-top scroll" href="#topbar">back to top</a>
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
   </h2>
 
   <p>Simply moving around is one of Vim's biggest strengths. I never have to use
@@ -119,7 +112,6 @@
   <i class="etym">(read: helpful for me)</i> use previously, so I use it in place
   of <code>Ctrl-W</code>.</p>
 
-  <div id="bottombar"></div>
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   <script src="js/lang-vim.js"></script>
   <script src="js/scroll.min.js"></script>
