@@ -9,14 +9,11 @@
           box-sizing: border-box;
 }
 
-html, body {
+html {
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-family: Vollkorn, Georgia, "Times New Roman", serif;
   font-size: 16px;
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
 } @media (min-width: 48em) {
   html {
     font-size: 21px;
@@ -24,25 +21,26 @@ html {
 }
 
 body {
-  padding: 2rem 1.5rem;
-  line-height: 1.5;
-  color: #292724;
-  max-width: 32rem;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
+  max-width: 32rem;
+  color: #292724;
+  line-height: 1.5;
+  background-image: url("pattern.png");
 }
 
 h1 {
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
   font-family: "Source Sans Pro", serif;
 }
 
 h2 {
   display: inline;
+  margin-bottom: 10px;
   border-bottom: 1px solid #eee;
   font-weight: bold;
   font-size: 1.4rem;
-  margin-bottom: 10px;
 } @media (min-width: 48em) {
   h2 {
     font-size: 1.6rem;
@@ -101,12 +99,24 @@ hr {
 }
 
 #index-title {
-  font-size: 60px;
   margin: 0;
+  font-size: 60px;
 }
 
 #top-title {
+  margin-top: -10px;
   font-size: 50px;
+}
+
+#home-link {
+  color: #292724;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-family: "Source Sans Pro", serif;
+} #home-link:hover {
+  text-decoration: underline;
 }
 
 .back-to-top {
@@ -125,8 +135,8 @@ hr {
 }
 
 .nav > li {
-  font-size: 1.3em;
   list-style-type: none;
+  font-size: 1.3em;
 }
 
 .nav a {
