@@ -1,4 +1,5 @@
 {
   "name": "test",
-  "author": "joshhartigan"
+  "author": "joshhartigan",
+  "description": "A test JSON Thing for receive, the Things manager."
 }
