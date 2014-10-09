@@ -6,7 +6,5 @@
   "get": "http://i.imgur.com/zhJWa26.jpg",
   "file": "picture.jpg",
 
-  "after": {
-    "mv picture.jpg my_picture.jpg"
-  }
+  "after": "mv picture.jpg my_picture.jpg"
 }
