@@ -2,6 +2,11 @@
   "name": "test",
   "author": "joshhartigan",
   "description": "A test JSON Thing for receive, the Things manager.",
+
   "get": "http://i.imgur.com/zhJWa26.jpg",
-  "file": "picture.jpg"
+  "file": "picture.jpg",
+
+  "after": {
+    "mv picture.jpg my_picture.jpg"
+  }
 }
