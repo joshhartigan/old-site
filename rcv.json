@@ -1,5 +1,6 @@
 {
   "name": "test",
   "author": "joshhartigan",
-  "description": "A test JSON Thing for receive, the Things manager."
+  "description": "A test JSON Thing for receive, the Things manager.",
+  "get": "https://i.imgur.com/zhJWa26.jpg"
 }
