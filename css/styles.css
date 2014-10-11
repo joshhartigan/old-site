@@ -57,6 +57,8 @@ a {
 
 img {
   vertical-align: middle;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 li {
@@ -150,3 +152,4 @@ hr {
   list-style-type: none;
   font-size: 21px;
 }
+
