@@ -3,8 +3,8 @@
 
 /* Some of this has been adapted from the CSS of markdotto.com */
 
-* {
-  -webkit-box-sizing: border-box:
+html, body {
+  -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -37,7 +37,6 @@ h1 {
 
 h2 {
   display: inline;
-  margin-bottom: 10px;
   border-bottom: 1px solid #eee;
   font-weight: bold;
   font-size: 1.4rem;
@@ -71,7 +70,7 @@ abbr {
 }
 
 pre, code {
-  font-size: 70%;
+  font-size: 16px;
   font-family: Menlo, Monaco, "Courier New" monospace;
 }
 
@@ -81,7 +80,7 @@ pre, code {
   }
 }
 
-pre, pre.prettyprint {
+pre, .prettyprint {
   margin-left: -25px;
   border-top: 1px solid #eee !important;
   border-right: 1px solid #eee !important;
@@ -107,7 +106,7 @@ hr {
 
 #top-title {
   margin-top: -10px;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 #home-link {
@@ -123,7 +122,7 @@ hr {
 
 .back-to-top {
   color: #999;
-  font-size: 14pt;
+  font-size: 16pt;
 }
 
 .etym {
@@ -132,13 +131,12 @@ hr {
 
 .math {
   margin-left: 1em;
-  font-size: 120%;
   font-family: Menlo, Monaco, monospace;
 }
 
 .nav > li {
   list-style-type: none;
-  font-size: 1.3em;
+  font-size: 1.4rem;
 }
 
 .nav a {
