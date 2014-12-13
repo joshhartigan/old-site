@@ -1,0 +1,52 @@
+body {
+    font-family: "Lato", Helvetica, sans-serif;
+    background-color: #fdf6e3;
+    color: #073642;
+    margin: 0px 0px 0px 0px;
+}
+
+/* red bar stretched across whole of
+ * top screen */
+#topbar {
+    width: 100%;
+    height: 10px;
+    background-color: #dc322f;
+    position: fixed;
+    margin-top: -16px;
+}
+
+/* same color as #topbar */
+h1 { color: #dc322f; font-size: 14pt; }
+
+h4 { color: #b06858; }
+
+/* div for main content and text */
+div.content {
+    color: #0b0b0c;
+    width: 831px; /* matches width of
+                   * title logo */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+}
+
+/* 'Josh Hartigan' header logo. font is Adelle Bold */
+#titlelogo {
+    display: block;
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+a { color: #268bd2; text-decoration: none; }
+
+/* '#' links by headers to anchor to content sections */
+a.sec { color: #c9c8c3; }
+
+pre { font-size: 13pt; background-color: #073642; color: #fdf6e3; }
+pre.prettyprint { background-color: #fdf6e3; }
+
+table { border: 1px solid black; background-color: #c0c0c0; }
+td { border: 1px dashed #c74b30; }
+td.top { border: 1px solid #752c1c; font-weight: bold; }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="Free and open programming information.">
+  <meta name="keywords" content="Programming,Computer,Science,Program,Code,Python">
+  <meta name="autor" content="Josh Hartigan">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Hash Table : Josh Hartigan</title>
+  <link rel="stylesheet" type="text/css" href="../style/site.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet" type="text/css">
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link href="../style/prettify.css" type="text/css">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="topbar"></div>
+  <a href="../index.html"><img id="titlelogo" src="../style/res/titlelogo.png" alt="Josh Hartigan"></a>
+  <div class="content">
+    <h1 name="hashtable"><a class="sec" href="#hashtable"># </a>Hash Tables</h1>
+    <p>A hash table is a reasonably simple data structure for implementing <i>associative arrays</i> -
+     similar to a usual list or array, in that it holds a certain quantity of elements, but in an associative
+    each element, or <b>key</b> can be assigned to its own value/s. A useful feature of hash tables is that
+    search efficiency is O(1) - constant time.</p>
+    <p>If a hash table were to be taken apart, it would be broken into two pieces: the array, and the hash function.
+    The array is the obvious part - the structure where searchable data is stored - and the hash function is what
+    enables values to have indexes assigned to them, that correspond with a value in the array of the same index.</p>
+    <p>Perhaps the best way to illustrate a hash table is through an actual, visual table:</p>
+    <table style="margin: 0 auto; text-align: center;">
+      <thead>
+        <th colspan="2"><i><code>myHashTable</code></i></th>
+      </thead>
+      <tr>
+        <td class="top">Keys (Array)</td>
+        <td class="top">Values (Hash Function)</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>"good"</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>"morning"</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>"friend"</td>
+      </tr>
+    </table>
+  </div>
+  <div class="content">
+    <h1 name="indiv-elem"><a class="sec" href="#indiv-elem"># </a>Accessing Individual Elements</h1>
+    <p>Of course a hash table would be of little use if specific keys and values could not be individually accessed
+    and manipulated, so all good implementations will support such a routine.</p>
+    <p>In <code>myHashTable</code>, we have three keys, three values, three rows - the length of the table is <b>3</b>.
+    Bear in mind that most of the time in computer science and programming, counting starts at 0, so the last element
+    of the table is at index <i>2</i>, not index 3.</p>
+    <p>Here's a short example in <a href="lang-python.html">Python</a> that demonstrates declaration of, and individual
+    element access in, a hash table:</p>
+    <pre>
+
+    myHashTable = {
+      0: "good",
+      1: "morning",
+      2: "friend",
+    }
+    print myHashTable[1] # ==> "morning"
+
+    myHashTable[2] = "enemy"
+    print myHashTable[2] # ==> "enemy"
+    </pre>
+    <p style="color: #808080; font-size: 10pt;">(As a side note, hash tables in Python are referred to as 'dictionaries'
+    - they work just like a dictionary book, with words (keys) and definitions (values))</p>
+    <p>Returning to the fact that hash tables search in constant time, here's an analogy to explain how:</p>
+    <p style="width: 500px; margin: 0 auto; font-family: Times, serif; font-size: 11pt; margin-bottom: 10px;">
+      Spanner &amp; Co., a leading spanner manufacturer, have a collection of data relating to each different kind of
+      spanner they produce, and how many of that type they have sold. Being a popular brand, with many kinds of spanners,
+      it would take forever and a day to browse through the entire collection, to see the sell-count of one particular kind.
+      So the software engineers at Spanner &amp; Co. built a software using a hash table - enter the name of a spanner, and
+      out comes the sell-count! Rather than iterating through each kind of spanner until the specified kind is reached, the
+      program just jumps straight to the one that is asked for:</p>
+    <pre style="background-color: black; color: lime; font-size: 10pt; margin: 0 auto; width: 300px; padding-top: 8px;">
+ &gt;&gt;&gt; Spanner Kind: <i>TurboWrench21K</i>
+ Sell-count: 224
+    </pre>
+    </p>
+  </div>
+  <div class="content">
+    <h1 name="non-int-key"><a class="sec" href="#non-int-key"># </a>Non-Integral Hash Table Keys</h1>
+    <p>You've probably realised that with only integers as the keys for a hash table, it works exactly like an array -
+    rendering it useless. This introduces the feature that sets hash tables apart from arrays - the keys don't have to be
+    integers. They can be characters, strings (like the name of a spanner), booleans, or anything else, in fact.
+    Here's a modified version of the <code>myHashTable</code> table shown previously:</p>
+    <table style="margin: 0 auto; text-align: center;">
+      <thead>
+        <th colspan="2"><i><code>secondTable</code></i></th>
+      </thead>
+      <tr>
+        <td class="top">Keys (Array)</td>
+        <td class="top">Values (Hash Function)</td>
+      </tr>
+      <tr>
+        <td>"name"</td>
+        <td>"Jenkins"</td>
+      </tr>
+      <tr>
+        <td>"age"</td>
+        <td>38</td>
+      </tr>
+      <tr>
+        <td>"employed"</td>
+        <td>True</td>
+      </tr>
+    </table>
+    <p>Similarly to how values in a table were accessed in <code>myHashTable</code>, we could access values in
+    <code>secondTable</code> like this:</p>
+    <pre>
+
+    print secondTable["age"] # ==> 38
+
+    secondTable["employed"] = False
+    print secondTable["employed"] # ==> False
+    </pre>
+  </div>
+  <div class="content">
+    <h1 name="usage"><a class="sec" href="#usage"># </a>Hash Table Usage</h1>
+    <p>Finally, it would be good to see usage of a hash table in a program. For this, I've written a basic implementation
+    of the Spanner &amp; Co. program, described above.</p>
+    <p>Remember, of course, that in this circumstance the code of the program is more important than the program itself.</p>
+  </div>
+  <pre class="prettyprint" style="width: 600px; font-size: 10pt; margin: 0 auto; margin-top: -40px; margin-bottom: 20px;">
+  spannerData = {
+      "TurboWrench21K": [224, 7.54],
+      "SuperSpan": [194, 5.99],
+      "SpannerSupreme": [88, 14.99],
+      "WonderWrench": [201, 6.50],
+  }
+
+  def getSpannerInfo(spannerName):
+      """ Return the sell count and price of a specified spanner. """
+      return spannerData[spannerName]
+
+  def addSpanner(name, price):
+      """ Add a spanner with the specified data to the table. """
+      spannerData[name] = [0, price]
+
+  def removeSpanner(name):
+      """ Remove the specified spanner from the table. """
+      try:
+          spannerData.pop(name)
+      except KeyError:
+          return "*** Spanner '" + name + "' was not found."
+
+  def main():
+      option = raw_input("[A]dd, [R]emove, [G]et data, or [Q]uit? &gt;&gt; ")
+      while option != "Q" and option != "q":
+          if option == "A" or option == "a":
+              name = raw_input("Spanner Name? &gt;&gt; ")
+              price = raw_input("Price? &gt;&gt; ")
+              addSpanner(name, price)
+          elif option == "R" or option == "r":
+              name = raw_input("Spanner Name? &gt;&gt; ")
+              if not removeSpanner(name):
+                  removeSpanner(name)
+              else:
+                  print removeSpanner(name)
+          elif option == "G" or option == "g":
+              name = raw_input("Spanner Name? &gt;&gt; ")
+              for spanner in spannerData.keys():
+                if spanner.startswith(name):
+                  print "Sell count: ", getSpannerInfo(spanner)[0]
+                  print "Price: ", getSpannerInfo(spanner)[1]
+                  break
+      else:
+          print("*** This instruction was not understood.")
+      option = raw_input("[A]dd, [R]emove, [G]et data, or [Q]uit? &gt;&gt; ")
+
+  if __name__ == "__main__":
+      main()
+  </pre>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Designing Typefaces</title>
+  <meta name="description" content="Designing Typefaces">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <a id="home-link" href="index.html">@joshhartigan</a>
+  <h1 id="top-title">Designing Typefaces</h1>
+
+  <p>I decided to try and design an (incomplete) font just for fun, without any
+  knowledge of typographical design beforehand. I also decided to document the
+  steps I took to achieve it.</p>
+
+  <ul class="contents">
+    <li><a class="scroll" href="#existing">Looking at Existing Fonts</a></li>
+    <li><a class="scroll" href="#creation">Creation of the Font</a></li>
+    <li><a class="scroll" href="#result">A Small, Final Result</a></li>
+  </ul>
+
+  <hr />
+
+  <h2 id="existing">Looking at Existing Fonts
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>Once I'd decided I was going to design a serif font (no particular reason),
+  I chose certain fonts I had already used, to see how they looked in true
+  detail and find common characteristics between them.</p>
+
+  <img src="resources/font_design_examples.png" alt="Examples" />
+
+  <p>I then selected one of these fonts &mdash; Adelle, the fourth font shown
+  &mdash; to see what ratio of width:height it used. Here's what I got:</p>
+
+  <img src="resources/font_design_ratio.png" alt="Ratio" />
+
+  <p>1:1 was probably the best ratio to use, since 202:193 is pretty random, and
+  20:19 might as well be 1:1. I didn't use any proper mathematics in deciding
+  the ratio I would use, but I think it turned out fine.</p>
+
+
+  <h2 id="creation">Creation of the Font
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>For the actual creation of the letters in my own font, I drew them out on
+  grid paper &mdash; I think this is the best way to do it, since I'm better
+  with a pencil than I'll ever be with a pen tool.</p>
+
+  <img src="resources/font_design_drawing.jpg" alt="Drawing" />
+
+  <p>As you can see I tried to keep consistency &mdash; serifs are usually the
+  same width and height, the letters are all 1:1 ratio, etc.</p>
+  <p>After drawing out a few letters on paper, I used Pixelmator (basically
+  Photoshop &minus; Supercost) to vectorise each shape. Of course the drawings
+  weren't exact, and so copy-and-paste enabled me to have both of the
+  stems/pillars/whatever at either side of the <code>H</code> have the same
+  shape, size, and curve.</p>
+
+
+  <h2 id="result">A Small, Final Result
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>Here's what I had after I finished vectorising the <code>H</code> &mdash;
+  my one is the one in the middle labelled 'Block Grande', and the other two are
+  the <code>H</code>s of the fonts they are labelled as.</p>
+
+  <img src="resources/font_design_h.png" alt="H" />
+
+  <p>I'm fairly pleased with how it turned out. It's quite thick, which I'm not
+  too keen on, but that's what has given it its name 'Block Grande'.</p>
+  <p>Now I just need to create 127 others of these &mdash; and that's only if I
+  want to support ASCII, let alone Unicode.</p>
+
+  <script src="js/scroll.min.js"></script>
+</body>
+
+</html>

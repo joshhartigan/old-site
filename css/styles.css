@@ -1,0 +1,153 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,600);
+
+/* Some of this has been adapted from the CSS of markdotto.com */
+
+html, body {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Vollkorn, Georgia, "Times New Roman", serif;
+} @media (min-width: 48em) {
+  html {
+    font-size: 21px;
+  }
+}
+
+body {
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  max-width: 32rem;
+  color: #292724;
+  line-height: 1.5;
+  background-image: url("pattern.png");
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Source Sans Pro", serif;
+}
+
+h2 {
+  display: inline;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  font-size: 1.4rem;
+} @media (min-width: 48em) {
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+a {
+  color: #E50053;
+  text-decoration: none;
+} a:hover {
+  text-decoration: underline;
+}
+
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+li {
+  padding-top: 8px;
+  list-style-type: square;
+}
+
+abbr {
+  border-bottom: 1px solid #555;
+}
+
+pre, code {
+  font-size: 16px;
+  font-family: Menlo, Monaco, "Courier New" monospace;
+}
+
+@media (max-width: 30em) {
+  code {
+    word-break: break-word;
+  }
+}
+
+pre, .prettyprint {
+  margin-left: -25px;
+  border-top: 1px solid #eee !important;
+  border-right: 1px solid #eee !important;
+  border-bottom: 1px solid #eee !important;
+
+  border-left: 10px solid #eee !important;
+
+  background-color: #fafafa;
+}
+
+hr {
+  margin: 2rem auto;
+  width: 300px;
+  height: 1px;
+  border: 0;
+  background: #ddd;
+}
+
+#index-title {
+  margin: 0;
+  font-size: 60px;
+}
+
+#top-title {
+  margin-top: -10px;
+  font-size: 60px;
+}
+
+#home-link {
+  color: #292724;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-family: "Source Sans Pro", serif;
+} #home-link:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  color: #999;
+  font-size: 16pt;
+}
+
+.etym {
+  color: #999;
+}
+
+.math {
+  margin-left: 1em;
+  font-family: Menlo, Monaco, monospace;
+}
+
+.nav > li {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.nav a {
+  color: black;
+} .nav a:hover {
+  color: #e50053;
+}
+
+.contents li {
+  margin-left: -35px;
+  list-style-type: none;
+  font-size: 21px;
+}
+

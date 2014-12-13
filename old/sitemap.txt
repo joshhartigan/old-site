@@ -1,0 +1,11 @@
+http://joshhartigan.github.io
+http://joshhartigan.github.io/index.html
+http://joshhartigan.github.io/404.html
+http://joshhartigan.github.io/pages/binary-tree.html
+http://joshhartigan.github.io/pages/hashtable.html
+http://joshhartigan.github.io/pages/lang-python.html
+http://joshhartigan.github.io/pages/linked-list.html
+http://joshhartigan.github.io/pages/most-frequent-int.html
+http://joshhartigan.github.io/pages/queue.html
+http://joshhartigan.github.io/pages/stack-heap.html
+http://joshhartigan.github.io/pages/topics.html

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>My Vim Config</title>
+  <meta name="description" content="Lishp">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <a id="home-link" href="index.html">@joshhartigan</a>
+  <h1 id="top-title">My Vim Config</h1>
+
+  <p>Vim is a very good editor, but it can be configured to be an even better
+  editor. Below is an annotated version of my .vimrc <span class="etym">(the file
+  that is loaded on Vim's opening)</span>, which can be found in its original
+  state on my <a href="https://github.com/joshhartigan/dotfiles">dotfiles repo</a>.</p>
+
+  <p>If you are new to Vim, this isn't for you. Some very basic and/or obvious
+  settings have been left out.</p>
+
+  <p>Also, my .vimrc changes a <i>lot</i> - therefore, the information here
+  won't be outdated, but it will also not be the newest information at any given
+  time.</p>
+
+  <ul class="contents">
+    <li><a class="scroll" href="#plugins">Plugins</a></li>
+    <li><a class="scroll" href="#navkeys">Navigation Keybindings</a></li>
+  </ul>
+
+  <hr />
+
+  <h2 id="plugins">Plugins
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>I use <a href="https://github.com/gmarik/Vundle">Vundle</a> to manage and
+  install Vim plugins. These are the most notable of the plugins I use:</p>
+
+  <pre class="prettyprint lang-vim">
+  Plugin 'gmarik/Vundle.vim'
+  Plugin 'delimitMate.vim'
+  Plugin 'ervandew/supertab'
+  Plugin 'scrooloose/nerdree'</pre>
+
+  <p>A few of these plugins are for providing a more modern look and feel to Vim:
+  <a href="http://www.vim.org/scripts/script.php?script_id=2754">DelimitMate</a>
+  simply automatically closes parentheses, quotes and such.</p>
+  <p><a href="https://github.com/hailt2u/vim-css3-syntax">vim-css3-syntax</a> and
+  <a href="https://github.com/jelera/vim-javascript-syntax">vim-javascript-syntax</a>
+  are simply rewritten, improved, and modernised syntax highlighters for the editor.</p>
+  <p><a href="https://github.com/ervandew/supertab">Supertab</a> is probably the most
+  useful in this plugin list, with the exception of Vundle itself. It provides
+  auto-completion of any word with the tab key, and retrieves words from all buffers
+  open.</p>
+  <p>The only non-self-explanatory plugin that is left is
+  <a href="https://github.com/chriskempson/base16-vim">Base 16</a>. This is
+  a set of 256-color color schemes for Vim which all look very good; they have
+  become the only color schemes I use.</p>
+
+  <hr />
+
+  <h2 id="navkeys">Navigation Keybindings
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>Simply moving around is one of Vim's biggest strengths. I never have to use
+  the arrow keys or the mouse - unless I want to, in which case I can.</p>
+  <p>But while all of the capabilities for fast text navigation are there, some
+  of the things can be sped up significantly, and there is a section of my .vimr
+  dedicated to doing this.</p>
+
+  <pre class="prettyprint lang-vim">
+  nnoremap H ^
+  nnoremap L $</pre>
+
+  <p>By default, Vim's <i>home</i> and <i>end</i> keys are ^ and $, similar to
+  characters used in regular expressions. But since these are keys that will be
+  used often, H and L are better keys to use, with their being positioned on the
+  home row.</p>
+  <p>As well as this, they support the fact that lowercase h and
+  lowercase l go left and right respectively, so H and L in capital should work
+  like an 'exaggerated' form of left and right.</p>
+
+  <pre class="prettyprint lang-vim">
+  " insert mode home/end
+  inoremap &lt;c-a&gt; &lt;esc&gt;I
+  inoremap &lt;c-e&gt; &lt;esc&gt;A
+  " command line home/end
+  cnoremap &lt;c-a&gt; &lt;home&gt;
+  cnoremap &lt;c-e&gt; &lt;end&gt;</pre>
+
+  <p><code>Ctrl-A</code> and <code>Ctrl-E</code> are the bindings for home and end
+  in the Emacs editor. The reason I use them in Vim is because they are useful in
+  insert mode, when the physical <code>Home</code> and <code>End</code> keys are
+  too far away from the home row. I also use the bindings in the Vim command line
+  for the same reason.</p>
+
+  <pre class="prettyprint lang-vim">
+  " move between splits with s + hjkl, new splits with ss or sv
+  nnoremap s <c-w></pre>
+
+  <p>Most of the time I spend in Vim, I'm using a split window. When I don't have
+  too many files open, I prefer it to tabs, as I can see everything at once. But
+  <code>Ctrl-W</code>, the default Vim binding for split control, can get
+  annoying when I need to press it a lot to get around.</p>
+  <p>The s key is on the home row, and didn't have a helpful
+  <i class="etym">(read: helpful for me)</i> use previously, so I use it in place
+  of <code>Ctrl-W</code>.</p>
+
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="js/lang-vim.js"></script>
+  <script src="js/scroll.min.js"></script>
+</body>
+
+</html>
+

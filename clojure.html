@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Clojure Programming</title>
+  <meta name="description" content="Lishp">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <a id="home-link" href="index.html">@joshhartigan</a>
+  <h1 id="top-title">Clojure Programming</h1>
+
+  <p><a href="http://www.Clojure.org">Clojure</a> is a dynamic, general-purpose, functional
+  programming language that is a dialect of Lisp, and runs on the JVM.
+  It was created by <a href="https://github.com/richhickey">Rich Hickey</a> and is
+  <a href="https://github.com/Clojure/Clojure">open source</a>.</p>
+
+  <ul class="contents">
+    <li><a class="scroll" href="#homoiconicity">Homoiconicity</a></li>
+    <li><a class="scroll" href="#literals">Basic Literals</a></li>
+    <li><a class="scroll" href="#collections">Collection Types</a></li>
+  </ul>
+
+  <hr />
+
+  <h2 id="homoiconicity">Homoiconicity
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>All Clojure code, just like all lisp code, is built up of actual Clojure
+  data structures. Take a function call, for example:</p>
+
+  <pre class="prettyprint lang-clj">
+  (Math/pow 2 8)
+  ;; =&gt; 256.0</pre>
+
+  <p>This is a list of different elements - the identifier for the function,
+  <code>Math/pow</code>, and the two arguments 2 and 8. The Clojure REPL or compiler will
+  automatically evaluate this list, and call the <code>Math/pow</code> function on 2 and 8,
+  but if the list is quoted - and therefore not evaluated, the REPL will simply
+  return the actual list itself:</p>
+
+  <pre class="prettyprint lang-clj">
+  (quote (Math/pow 2 8))
+  ;; =&gt; (Math/pow 2 8))</pre>
+
+  <p>After that, we can evaluate the quoted list, creating a more verbose (and
+  pointless) way of writing Clojure code:</p>
+
+  <pre class="prettyprint lang-clj">
+  (eval (quote (Math/pow 2 8)))
+  ;; =&gt; 256.0</pre>
+
+  <hr />
+
+  <h2 id="literals">Basic Literals
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+
+  <p>As Clojure runs on the JVM, all of the basic data types correspond to data types
+  in Java.</p>
+
+  <ul>
+    <li>Clojure strings, e.g. <code>"clojure"</code> are Java strings, e.g. <code>"java"</code>.</li>
+    <li><code>true</code> and <code>false</code> have the same boolean values in Clojure and Java.</li>
+    <li>The 'nothing' value, <code>nil</code>, corresponds to the <code>null</code> value in Java.</li>
+    <li>Characters in Java, for example <code>'b'</code>, are delimited with a backslash in
+    Clojure, e.g. <code>\b</code></li>
+  </ul>
+
+  <p>Clojure has a function for finding the class from which something derives, and
+  it is used like this:</p>
+
+  <pre class="prettyprint">
+  (class 5)
+  ;; =&gt; java.lang.Long
+
+  (class 3.14)
+  ;; =&gt; java.lang.Double
+
+  (class "fido")
+  ;; =&gt; java.lang.String
+
+  (class false)
+  ;; =&gt; java.lang.Boolean</pre>
+
+  <p>All the types mentioned above are <i>scalar types</i>- the kind of types that aren't
+  collections. The opposite set of types is called, obviously, <i>collection types</i></p>
+
+  <hr />
+
+  <h2 id="collections">Collection Types
+    <a class="back-to-top scroll" href="#top-title">back to top</a>
+  </h2>
+  <p>The most common collection-based data structures in Clojure are the following
+  four:</p>
+
+  <ul>
+
+    <li>Lists, as previously seen:
+
+    <pre class="prettyprint lang-clj">
+    (class (quote ("hello" 44.5 true "goodybe")))
+    ;; =&gt; clojure.lang.PersistentList</pre></li>
+
+    <li>Vectors:
+
+    <pre class="prettyprint lang-clj">
+    (class [x y 2 5 "fido"])
+    ;; =&gt; clojure.lang.PersistentVector</pre></li>
+
+    <li>Maps:
+
+    <pre class="prettyprint lang-clj">
+    (class {:name "Red" :hex "#FF0000"})
+    ;; =&gt; clojure.lang.PersistentArrayMap</pre></li>
+
+    <li>and Sets (mathematical sets):
+
+    <pre class="prettyprint lang-clj">
+    (class #{1 2 3 4 5})
+    ;; =&gt; clojure.lang.PersistentHashSet</pre></li>
+
+  </ul>
+
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="js/scroll.min.js"></script>
+</body>
+
+</html>
